@@ -1,9 +1,17 @@
 import numpy as np
+import scipy.io.wavfile
 import sys
 from aubio import source, pitch
 
 win_s = 4096
 hop_s = 512 
+
+out = scipy.io.wavfile.read("StarWars60.wav", mmap=False)
+a, b = out
+
+your_file = "StarWars60.wav"
+samplerate = a
+
 
 s = source(your_file, samplerate, hop_s)
 samplerate = s.samplerate

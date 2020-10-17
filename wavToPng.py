@@ -14,7 +14,7 @@ def sigmoid(x):
 
 
 
-out = scipy.io.wavfile.read("audio.wav", mmap=False)
+out = scipy.io.wavfile.read("StarWars60.wav", mmap=False)
 a,b = out
 print(out)
 
