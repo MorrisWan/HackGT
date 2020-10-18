@@ -1,9 +1,11 @@
 import scipy.io.wavfile
 import math
 from PIL import Image
+import averageAmplitude
 import numpy as np
 import matplotlib.pyplot as plt
 def sigmoid(x): # condense variables down to 0<x<1   
+
     if x < -700:
         x = -700
  
@@ -23,7 +25,9 @@ def soundToColor(x):
 
 
 
+
 out = scipy.io.wavfile.read("rickroll.wav", mmap=False) # read file
+
 a,b = out
 print(out)
 #plt.plot(b, label="Sound Data")
@@ -69,3 +73,5 @@ for i in range(img.size[0]):
         count += 2
 print("done")
 img.show()
+
+averageAmplitude.averageAmplitude(b)
