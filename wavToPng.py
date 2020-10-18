@@ -1,6 +1,8 @@
 import scipy.io.wavfile
 import math
 from PIL import Image
+import averageAmplitude
+
 def sigmoid(x):
     if x < -700:
         x = -700
@@ -35,3 +37,5 @@ for i in range(img.size[0]):
         count += 3
 print("done")
 img.show()
+
+averageAmplitude.averageAmplitude(b)
